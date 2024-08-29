@@ -23,5 +23,22 @@ section {
 .animal-one {
     width: 474px;
     height: 360px;
-    position: absolute; 
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    animation-name: elephantdance;
+    animation-duration: 0.1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes elephantdance {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
