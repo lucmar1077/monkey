@@ -19,10 +19,132 @@ section {
     width: 100%;
     height: 100vh;
     background-image: url(../images/background.jpg);
+    /* background-repeat: no-repeat; */
 }
+
 .animal-one {
     width: 474px;
     height: 360px;
+    right: 0;
+    position: fixed; 
+    animation: squish 1s infinite ease-in-out;
+}
+
+@keyframes squish {
+    0% {
+        transform:scaleY(100%);
+    }
+    50% {
+        transform:scaleY(95%);
+    }
+    100% {
+        transform:scaleY(100%);
+    }
+}
+
+.animal-two {
+    width: 474px;
+    height: 360px;
+    left: -110px;
+    bottom: 600px;
+    position: absolute; 
+    animation: sway 3s infinite  ease-in-out; 
+    transform-origin: left;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+.monkey {
+    position: absolute;
+    top: -40px;
+    left: -150px;
+    animation: moveAcross 8s linear, swing 2s ease-in-out infinite alternate;
+    animation-delay: 10s;
+}
+
+.monkey img {
+    width: 200px;
+    transform: scaleX(-1);
+    transform-origin: top center;
+}
+
+@keyframes moveAcross {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 130vw;
+    }
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.cheetah-container {
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+    left: -500px;
+}
+
+.cheetah {
+    width: 500px; 
+    height: 200px;
+    background-image: url("../images/runningcat.png"); 
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: 0px -60px;
+    animation:moveAcross 4s linear, run 0.7s steps(1) infinite;
+    animation-delay: 5s;
+}
+
+
+
+@keyframes run {
+    0% {
+        background-position: 0px -60px;
+    }
+    12.5% {
+        background-position: -550px -60px;
+    }
+    25% {
+        background-position: 0px -310px;
+    }
+    37.5% {
+        background-position: -510px -310px;
+    }
+    50% {
+        background-position: 0px -550px;
+    } 
+    62.5% {
+        background-position: -510px -570px;
+    }
+    75% {
+        background-position: 0px -830px;
+    }
+    87.5% {
+        background-position: -510px -820px;
+    } 
+    100% {
+        background-position: 0px -60px;
+    }
     position: absolute;
     top: 200px;
     right: 100px;
