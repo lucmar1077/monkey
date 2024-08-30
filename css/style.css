@@ -29,16 +29,52 @@ section {
 .animal-two {
     width: 474px;
     height: 360px;
-    left: 0;
-    bottom: 0;
+    left: -110px;
+    bottom: 100px;
     position: absolute; 
-    background-image: url("../images/toucan.png");
-    animation: sway 3s infinite ease-in-out;
+    animation: sway 3s infinite  ease-in-out; 
+    transform-origin: left;
 }
 
 @keyframes sway {
-    0% {transform: rotate(0deg);}
-    25% {transform: rotate(25deg);}
-    75% {transform: rotate(-25deg);}
-    100% {transform: rotate(0deg);}
+    0% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+.monkey {
+    position: absolute;
+    top: -40px;
+    left: -150px;
+    animation: moveAcross 8s linear infinite, swing 2s ease-in-out infinite alternate;
+}
+
+.monkey img {
+    width: 200px;
+    transform: scaleX(-1);
+    transform-origin: top center;
+}
+
+@keyframes moveAcross {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
 }
