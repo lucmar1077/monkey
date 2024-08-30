@@ -68,7 +68,7 @@ section {
     position: absolute;
     top: -40px;
     left: -150px;
-    animation: moveAcross 8s linear, swing 2s ease-in-out infinite alternate;
+    animation: moveAcross 8s linear infinite, swing 2s ease-in-out infinite alternate;
     animation-delay: 10s;
 }
 
