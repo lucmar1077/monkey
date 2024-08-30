@@ -163,7 +163,7 @@ body {
     background-repeat: no-repeat;
     position: absolute;
     background-position: 0px -60px;
-    animation:moveAcross 4s linear, run 0.7s steps(1) infinite;
+    animation:moveAcross 4s linear infinite, run 0.7s steps(1) infinite;
     animation-delay: 5s;
 }
 
